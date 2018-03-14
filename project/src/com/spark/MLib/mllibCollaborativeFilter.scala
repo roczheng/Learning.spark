@@ -14,7 +14,7 @@ def main (args : Array[String]): Unit ={
       Rating(user.toInt, item.toInt, rate.toDouble)
   } )
   val rank = 2
-  val numIterations = 3
+  val numIterations = 4
   val model = ALS.train(ratings, rank, numIterations, 0.01)
   val rs = model.recommendProducts(2, 1)
   rs.foreach(println)
